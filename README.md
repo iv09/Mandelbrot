@@ -3,7 +3,7 @@
 My version... of a classic
 
 Compiles on  Raspberry Pi 4 & 5, the Makefile could require
-changes for other systems.
+changes for other platforms.
 
 Requires libraylib.a in the main directory
 
