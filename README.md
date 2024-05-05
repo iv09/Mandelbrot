@@ -17,6 +17,7 @@ Use the mouse and click to zoom in.
 
 Press "O" to zoom out
 
-Press "1", "2", "3" or "4" to change the color set 
+Press "1", "2", "3" or "4" to change the color set. 
+Default is "1", "2" is just slightly different.
 
 Press "C" to generate a screen capture named capture.png

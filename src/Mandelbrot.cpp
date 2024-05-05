@@ -294,6 +294,26 @@ int main() {
 			}
 			
 			if (IsKeyPressed(KEY_ONE)) {
+				formulaR1 = 7; formulaR2 = 30; 
+				formulaG1 = 5; formulaG2 = 31;
+				formulaB1 = 15; formulaB2 = 32;
+				palCorr1 = 1;
+				palShift2 = 0.1;
+				palMult2 = 0.9;
+				redrawNeeded = true;
+			}
+				
+ 			if (IsKeyPressed(KEY_TWO)) {
+				formulaR1 = 30; formulaR2 = 30; 
+				formulaG1 = 31; formulaG2 = 31;
+				formulaB1 = 32; formulaB2 = 32;
+				palCorr1 = 0.97;
+				palShift2 = 0.1;
+				palMult2 = 0.9;
+				redrawNeeded = true;
+			}
+			
+  			if (IsKeyPressed(KEY_THREE)) {
 				formulaR1 = 7; formulaR2 = 7; 
 				//cout << "formulaR " << formulaR << endl;
 				formulaG1 = 5; formulaG2 = 5;
@@ -304,17 +324,7 @@ int main() {
 				redrawNeeded = true;
 			}
 				
- 			if (IsKeyPressed(KEY_TWO)) {
-				formulaR1 = 7; formulaR2 = 30; 
-				formulaG1 = 5; formulaG2 = 31;
-				formulaB1 = 15; formulaB2 = 32;
-				palCorr1 = 1;
-				palShift2 = 0.1;
-				palMult2 = 0.9;
-				redrawNeeded = true;
-			}
-				
-  			if (IsKeyPressed(KEY_THREE)) {
+ 			if (IsKeyPressed(KEY_FOUR)) {
 				formulaR1 = 30; formulaR2 = 7; 
 				formulaG1 = 31; formulaG2 = 5;
 				formulaB1 = 32; formulaB2 = 15;
@@ -324,15 +334,6 @@ int main() {
 				redrawNeeded = true;
 			}
 				
- 			if (IsKeyPressed(KEY_FOUR)) {
-				formulaR1 = 30; formulaR2 = 30; 
-				formulaG1 = 31; formulaG2 = 31;
-				formulaB1 = 32; formulaB2 = 32;
-				palCorr1 = 0.97;
-				palShift2 = 0.1;
-				palMult2 = 0.9;
-				redrawNeeded = true;
-			}
 				
       
 			
