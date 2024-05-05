@@ -161,33 +161,7 @@ double palCorr1 = 1;
 double palShift2 = 0.1;
 double palMult2 = 0.9;
 
-// DrawPixel(startPosX+(endPosX-startPosX)*(positionY-startPosY)/(endPosY-startPosY), positionY , color);
-// Defining the size of the screen.
-//#define X 1600
-//#define Y 1024
 
- 
-// Recursive function to provide the iterative every 100th
-// f^n (0) for every pixel on the screen.
-
- 
-//int MandleSet()
-//{
- 
-    // Calling Mandle function for every
-    // point on the screen.
-//    for (double x = -2; x < 2; x += 0.0015) {
-//        for (double y = -1; y < 1; y += 0.0015) {
-//            double _Complex temp = x + y * _Complex_I;
-//            Mandle(temp);
-//        }
- //   }
-//    return 0;
-//}
-
-
-//	Mandelbrot X scale (-2.30, 0.9)
-//  Mandelbrot Y scale (-1.2, 1.2)
 double MandelbrotCenterX = -0.7;
 double MandelbrotCenterY = 0.0;
 double MandelbrotScale = 3.2/WindowWidth; // To get the initial -2.30, 0.9 range
@@ -197,9 +171,7 @@ int max_iterations = 0;
 int iterations_bias = 0;
 
 Color computeColor(int iteration)
-// iteration = sqrt(iteration); // joli aussi
-//iteration = (int)2500*log(iteration); // wow jaune et bleu essayer 100000 (le facteur multiplicateur m pour log*m = 10000) ? 2500 10000
-// cout << "Px = " << Px << " Py = " << Py << " R + " << (int)(255*GetColorValueFromFormula(formulaR, temp)) << endl;
+
 {	
 	int max_iter_div2 = max_iterations >> 1;
 	
@@ -338,9 +310,7 @@ int main() {
       
 			
 			if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
-				//cout << "Bingo!" << endl ; 
-				//cout << GetMouseX() << endl;
-				//cout << GetMouseY() << endl;
+				
 				MandelbrotCenterX = MandelbrotCenterX + (GetMouseX() - WindowWidth/2)* MandelbrotScale;
 				MandelbrotCenterY = MandelbrotCenterY + (GetMouseY() - WindowHeight/2)* MandelbrotScale;
 				MandelbrotScale = MandelbrotScale/2;
