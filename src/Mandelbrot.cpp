@@ -231,6 +231,7 @@ int main() {
 	bool redrawNeeded = false;
 	bool exit = false;
 
+	Image capture;
 	
 	cout << "Maximum number of iterations: ";
 	cin >> max_iterations;
@@ -250,10 +251,12 @@ int main() {
         ClearBackground(BLACK);
             
         MandleSet();
-
-        EndDrawing();
+	
+	capture = LoadImageFromScreen();    // LoadImageFromScreen() must be executed within a begin/end drawing context   
+	
+	EndDrawing();
         
-       redrawNeeded = false;
+        redrawNeeded = false;
         
         while(!redrawNeeded && !exit) {
         
@@ -318,12 +321,14 @@ int main() {
 				redrawNeeded = true;
 			}
 			
-			if (IsKeyPressed(KEY_PRTSC)) {
-			    Image capture = LoadImageFromScreen();       
+			if (IsKeyPressed(KEY_C)) {
+			    
 			    ExportImage(capture, "capture.png");   
 			}
 			if (WindowShouldClose()) exit=true;
 		}
+		
+
        
 	}
 
