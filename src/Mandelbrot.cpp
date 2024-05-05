@@ -318,7 +318,7 @@ int main() {
 				redrawNeeded = true;
 			}
 			
-			if (IsKeyPressed(KEY_C)) {
+			if (IsKeyPressed(KEY_PRTSC)) {
 			    Image capture = LoadImageFromScreen();       
 			    ExportImage(capture, "capture.png");   
 			}
